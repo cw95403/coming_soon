@@ -25,7 +25,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/coming_soon/send_mail.php" method="POST">
+                    <form action="send_mail.php" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" id="name" name="name" class="form-control" required>

@@ -10,7 +10,7 @@
     <div>
         <h1 class="text-success">Thank You!</h1>
         <p>Your message has been sent successfully. We’ll get back to you as soon as possible.</p>
-        <a href="/" class="btn btn-primary mt-3">Go Back to Home</a>
+        <a href="./" class="btn btn-primary mt-3">Go Back to Home</a>
     </div>
 </body>
 </html>

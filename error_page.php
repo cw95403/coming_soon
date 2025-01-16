@@ -10,7 +10,7 @@
     <div>
         <h1 class="text-danger">Oops!</h1>
         <p>Something went wrong. Please try again later.</p>
-        <a href="/" class="btn btn-primary mt-3">Go Back to Home</a>
+        <a href="./" class="btn btn-primary mt-3">Go Back to Home</a>
     </div>
 </body>
 </html>

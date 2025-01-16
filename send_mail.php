@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . 'vendor/autoload.php';
 use Dotenv\Dotenv;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -11,7 +11,7 @@ $dotenv->load();
 // Logging function
 function log_message($file, $message) {
     $log = "[" . date("Y-m-d H:i:s") . "] " . $message . PHP_EOL;
-    file_put_contents(__DIR__ . "/logs/$file", $log, FILE_APPEND);
+    file_put_contents(__DIR__ . "logs/$file", $log, FILE_APPEND);
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -66,16 +66,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $mail->send();
         log_message("success.log", "Email sent successfully from $email.");
-        header("Location: /coming_soon/thank_you.php");
+        header("Location: thank_you.php");
         exit;
     } catch (Exception $e) {
         log_message("error.log", "Mailer error: " . $mail->ErrorInfo);
-        header("Location: /coming_soon/error_page.php");
+        header("Location: error_page.php");
         exit;
     }
 } else {
     log_message("error.log", "Invalid request method.");
-    header("Location: /coming_soon/error_page.php");
+    header("Location: error_page.php");
     exit;
 }
 ?>
